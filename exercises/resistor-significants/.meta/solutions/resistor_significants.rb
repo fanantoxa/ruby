@@ -10,10 +10,10 @@ module ResistorSignificants
     violet
     grey
     white
-  )
+  ).freeze
 
-  def self.value(color1, color2)
-    [color1, color2]
+  def self.value(color_bands)
+    color_bands
       .map { |color| COLORS.index(color) }
       .join
       .to_i
